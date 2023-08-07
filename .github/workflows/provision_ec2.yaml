@@ -1,4 +1,4 @@
-name: Provision t3.micro EC2
+name: Provisionierung T3 Micro Instanz to AWS
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
       ec2-name:
         description: EC2 name
         required: true
-        default: 'App Server'
+        default: 'Namen eingeben'
         type: string
 jobs:
   provision-ec2:
