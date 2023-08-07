@@ -15,7 +15,7 @@ data "aws_ami" "ubuntu" {
 }
 
 provider "aws" {
-  region  = "eu-west-1"
+  region  = "eu-central-1"
 }
 
 resource "aws_instance" "app_server" {
