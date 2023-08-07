@@ -1,5 +1,4 @@
-name: Provisionierung Amazon S3 Storage
-
+name: Provisionierung Amazon Kubernetes Cluster 
 
 # Controls when the workflow will run
 on:
