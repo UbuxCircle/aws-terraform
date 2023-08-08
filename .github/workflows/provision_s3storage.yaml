@@ -69,6 +69,10 @@ jobs:
           echo test, and deploy your project.
  Test-and-Security-Checks:
     needs: Initial-Deployment
+
+   # terraform focus to module
+   # terraform plan -target=module.modules.s3storage.s3_template 
+    
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
