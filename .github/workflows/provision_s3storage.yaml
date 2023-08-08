@@ -11,17 +11,28 @@ on:
         default: ''
         type: string
       s3-visibility:
-        description: s3 public or private
+        type: choice
+        description: s3 visibility
         required: true
         options:
         - public
         - private
+      s3-size:
+        description: s3 size
+        required: true
+        default: ''
+        type: string
       message:
-        description: Ticketnumber / Change
+        description: ticket / changenumber
         required: true
       environment:
-        type: environment
-        
+        type: choice
+        description: environment
+        options:
+        - production
+        - test
+        - development
+       
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
