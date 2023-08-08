@@ -51,16 +51,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
- Deyploy:
-    runs-on: ubuntu-latest
-    steps:
-       - name: Send greeting
-         run: echo "${{ github.event.inputs.message }} ${{ fromJSON('["", "🥳"]')[github.event.inputs.use-emoji == 'true'] }} ${{ github.event.inputs.name }}"
-       - uses: actions/checkout@v3
-       - name: Configure AWS credentials
-       - uses: aws-actions/configure-aws-credentials@v1
-       - name: Setup Terraform
-       - uses: hashicorp/setup-terraform@v2
+ 
+  
 
      
     
