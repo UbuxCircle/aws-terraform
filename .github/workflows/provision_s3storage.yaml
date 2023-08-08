@@ -1,14 +1,27 @@
-name: Provisionierung S3 Storage
+name: Provisionierung S3 Storage Bucket
 
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
+   workflow_dispatch:
+    inputs:
+      s3-name:
+        description: s3 storage name
+        required: true
+        default: ''
+        type: string
+      s3-visibility:
+        description: s3 public or private
+        required: true
+        options:
+        - public
+        - private
+      message:
+        description: Ticketnumber / Change
+        required: true
+      environment:
+        type: environment
+        
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
